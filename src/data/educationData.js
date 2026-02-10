@@ -17,7 +17,7 @@ export const educationData = [
         id: 3,
         institution: 'Centre for Development of Advanced Computing (CDAC)',
         course: 'Post Graduate Diploma',
-        startYear: '2023',
-        endYear: '2024'
+        startYear: '2022',
+        endYear: '2023'
     },
 ]
