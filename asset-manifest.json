@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/abhay-kamble-web/static/css/main.18c677f4.chunk.css",
-    "main.js": "/abhay-kamble-web/static/js/main.bbbbbfd2.chunk.js",
-    "main.js.map": "/abhay-kamble-web/static/js/main.bbbbbfd2.chunk.js.map",
+    "main.js": "/abhay-kamble-web/static/js/main.e479dd7e.chunk.js",
+    "main.js.map": "/abhay-kamble-web/static/js/main.e479dd7e.chunk.js.map",
     "runtime-main.js": "/abhay-kamble-web/static/js/runtime-main.7cba8450.js",
     "runtime-main.js.map": "/abhay-kamble-web/static/js/runtime-main.7cba8450.js.map",
     "static/css/2.12578c66.chunk.css": "/abhay-kamble-web/static/css/2.12578c66.chunk.css",
@@ -161,6 +161,6 @@
     "static/css/2.12578c66.chunk.css",
     "static/js/2.549e47db.chunk.js",
     "static/css/main.18c677f4.chunk.css",
-    "static/js/main.bbbbbfd2.chunk.js"
+    "static/js/main.e479dd7e.chunk.js"
   ]
 }
