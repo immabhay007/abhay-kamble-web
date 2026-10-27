@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { FaCode } from 'react-icons/fa';
+import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
 
 import placeholder from '../../../assets/png/placeholder.png';
@@ -18,6 +19,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
             border: `2px solid ${theme.tertiary}`,
             color: theme.tertiary,
             transition: 'all 0.2s',
+            textDecoration: 'none',
             '&:hover': {
                 backgroundColor: theme.secondary,
                 color: theme.primary,
@@ -28,7 +30,6 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
         icon: {
             fontSize: '1.1rem',
             transition: 'all 0.2s',
-            '&:hover': {},
         },
     }));
 
@@ -48,48 +49,43 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                     >
                         {name}
                     </h2>
-                    <img src={image ? image : placeholder} alt={name} />
+
+                    <img
+                        src={image ? image : placeholder}
+                        alt={name}
+                    />
+
                     <div className='project--showcaseBtn'>
-                        {/* <a
-                            href={demo}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.iconBtn}
-                            aria-labelledby={`${name
-                                .replace(' ', '-')
-                                .toLowerCase()} ${name
-                                .replace(' ', '-')
-                                .toLowerCase()}-demo`}
-                        >
-                            <FaPlay
-                                id={`${name
-                                    .replace(' ', '-')
-                                    .toLowerCase()}-demo`}
-                                className={classes.icon}
-                                aria-label='Demo'
-                            />
-                        </a> */}
-                        <a
-                            href={code}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.iconBtn}
-                            aria-labelledby={`${name
-                                .replace(' ', '-')
-                                .toLowerCase()} ${name
-                                .replace(' ', '-')
-                                .toLowerCase()}-code`}
-                        >
-                            <FaCode
-                                id={`${name
-                                    .replace(' ', '-')
-                                    .toLowerCase()}-code`}
-                                className={classes.icon}
-                                aria-label='Code'
-                            />
-                        </a>
+                        {demo && (
+                            <a
+                                href={demo}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                className={classes.iconBtn}
+                                aria-label={`Live demo of ${name}`}
+                                title='Live Demo'
+                            >
+                                <FaExternalLinkAlt
+                                    className={classes.icon}
+                                />
+                            </a>
+                        )}
+
+                        {code && (
+                            <a
+                                href={code}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                className={classes.iconBtn}
+                                aria-label={`Source code of ${name}`}
+                                title='Source Code'
+                            >
+                                <FaCode className={classes.icon} />
+                            </a>
+                        )}
                     </div>
                 </div>
+
                 <p
                     className='project--desc'
                     style={{
@@ -99,6 +95,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                 >
                     {desc}
                 </p>
+
                 <div
                     className='project--lang'
                     style={{
@@ -106,8 +103,8 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                         color: theme.tertiary80,
                     }}
                 >
-                    {tags.map((tag, id) => (
-                        <span key={id}>{tag}</span>
+                    {tags.map((tag, index) => (
+                        <span key={index}>{tag}</span>
                     ))}
                 </div>
             </div>

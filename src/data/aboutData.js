@@ -1,6 +1,9 @@
+
 export const aboutData = {
-    title: "Who I am",
-    description1: "My name is Abhay Kamble, a Full Stack Developer from India. I specialize in designing, developing, and deploying scalable web applications using modern technologies and frameworks.",
-    description2: "Currently, I am working as a Full Stack Developer where I focus on end-to-end development — from crafting efficient backend systems with .NET to building responsive, user-friendly frontends using React.js, JavaScript, and modern libraries.",
+    title: "Who I Am",
+    description1:
+        "I'm Abhay Kamble, a Full Stack Developer specializing in building scalable, reliable, and user-focused web applications using Python, FastAPI, React.js, and .NET Core.",
+    description2:
+        "My expertise spans backend API development, responsive frontend design, database management, and cloud solutions using Microsoft Azure. I enjoy solving complex problems and building practical, production-ready applications using modern technologies and best coding practices.",
     image: 1
-}
+};
